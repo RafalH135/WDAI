@@ -1,24 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kolorowe kwadarty</title>
     <style>
-        div{
+        .flex-conteiner1{
+            display: flex;
+            flex-flow: row;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            padding: 0;
+            margin: 0;
+        }
+        .flex-conteiner2{
+            display: flex;
+            flex-flow: row;
+            justify-content: space-evenly;
+            flex-wrap: nowrap;
+            padding: 0;
+            margin: 0;
+        }
+        .item{
             width:100px;
             height: 100px;
-            background-color: aqua;
         }
     </style>
 </head>
 <body>
-    <div></div> 
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+    <div class="flex-conteiner1"> 
+        <div class="item" style="background-color: teal;"></div>
+        <div class="item" style="background-color: red;"></div>
+    </div>
+    <div class="flex-conteiner2"> 
+        <div class="item" style="background-color: blueviolet;"></div>
+        <img class="item" src="https://a.allegroimg.com/original/117f47/34e9971f464385c262ffa0999696/Naklejki-motywacyjne-Wesola-buzia-Zestaw-88-sztuk-Marka-LearnHow" alt="Uśmiechnięta buzia"></img>
+        <div class="item" style="background-color: green;"></div>
+    </div>
 
 </body>
 </html>
