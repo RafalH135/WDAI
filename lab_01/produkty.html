@@ -5,10 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista produktów w formie Tabeli</title>
     <style>
-        table,th,td {
-            border: 1px solid black;
-            border-collapse: collapse;
+        tr:nth-child(even) {
+          background-color: #b8ffa8;
         }
+        table,th,td {
+          border: 1px solid black;
+          border-collapse: collapse;
+          padding: 6px;
+          font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        th {
+          background-color: #30fc03;
+        }
+        
     </style>
 </head>
 <body>
@@ -33,13 +42,13 @@
   </tr>
    <tr>
     <td>3</td>
-    <td>Mars</td>
+    <td>batonik Mars</td>
     <td>2,50</td>
     <td>7</td>
   </tr>
    <tr>
     <td>4</td>
-    <td>Lody 1l</td>
+    <td>lody Bracia Koral 1l</td>
     <td>19,50</td>
     <td>5</td>
   </tr>
