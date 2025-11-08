@@ -1,0 +1,163 @@
+nav ul{
+    list-style-type: none;
+    justify-content: space-around;
+    display: flex;
+    padding: 20px;
+}
+nav li{
+    padding: 18px;
+    justify-content: space-around;
+    background-color:rebeccapurple;
+    width: 18%;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 900;
+}
+nav li:hover{
+    background-color:rgb(134, 73, 194);
+    /* background-color: rgb(197, 4, 65); */
+    font-weight: bold;
+    font-size: 18px;
+}
+main th{
+    background-color:rebeccapurple;
+    border:none;
+}
+.linki{
+    font-weight: 600;
+}
+.linki:hover{
+    color: rgb(255, 49, 49);
+}
+main td,tr{
+    background-color:rgb(64, 13, 106);
+    border: none;
+}
+a {
+    text-decoration: none;
+    color: rgb(224, 31, 31);
+}
+
+.roboto-font {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  color: rgb(224, 31, 31);
+}
+tr, th, td {
+    border: solid 1px;
+    padding: 5px;
+}
+
+.navbar {
+    width: 20%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.picture_in_gallery {
+    width: 20%;
+    padding: 10px;
+    background-color: rgb(36, 19, 58);
+    border-radius: 10px;
+}
+.picture_in_gallery:hover{
+    background-color: rgb(47, 30, 69);
+}
+main {
+    /* background-color: rgb(55, 15, 93); */
+    margin: 5%;
+    border-radius: 20px;
+    padding: 3.5%;
+    background-color: rgb(42, 12, 71);
+}
+body {
+    margin: 0;
+    padding: 0;
+    /* height: 100vh;
+    background-image: url("pictures/tlo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed; */
+    background-color: rgb(15, 2, 33);
+}
+.strefy {
+    font-weight: 700;
+    padding: 20px;
+    width: 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-align: center;
+    border-radius: 10px;
+    height: 23%;
+}
+.strefy:hover{
+    width: 26%;
+}
+.strefy-font:hover{
+    font-weight: 1000;
+    color: rgb(255, 49, 49);
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.7); /* półprzezroczyste czarne tło */
+  padding: 10px;
+  border-radius: 10px;
+}
+.powitanie
+{
+    background-image: url(pictures/Pacman.gif);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 200px;
+    border-radius: 20px;
+}
+h1 {
+    padding: 20px;
+    /* background-color: rgb(55, 15, 93); */
+    background-color: rgb(53, 17, 100);
+    margin: 3%;
+    border-radius: 20px;
+}
+
+.nazwa {
+    font-size: 90px;
+    margin-left: 0px;
+    background-color: transparent;
+    padding: 10px;
+}
+.jersey-10-regular {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.logo {
+    width: 5%;
+    height: 5%;
+}
+
+article{
+    border-radius: 20px;
+    background-color: rgb(64, 13, 106);
+    padding: 20px;
+}
+.sociale{
+    width: 25px;
+    height: 25px;
+}
+footer{
+    background-color: rgb(42, 12, 71);
+    padding: 10px;
+    padding-left: 20px;
+}

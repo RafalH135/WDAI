@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="pictures/favicon(2).ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="formularz.js" defer></script>
+</head>
+<body class="roboto-font">
+    <div class="container" style="justify-content: left; margin-left: 5%; align-items: center;">
+        <img src="pictures/gameboy1.png" class="logo"><h1 class="jersey-10-regular nazwa"> Arcade</h1>
+    </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="cennik.html">Cennik</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+        </nav>
+    <main>
+        <table>
+            <tr>
+                <th colspan="2">Godziny otwarcia</th>                
+            </tr>
+            <tr>
+                <th>Poniedziałek</th>
+                <td>17:00 - 00:00</td>                
+            </tr>
+             <tr>
+                <th>Wtorek</th>
+                <td>18:00 - 00:00</td>                
+            </tr>
+             <tr>
+                <th>Środa</th>
+                <td>17:00 - 00:00</td>                
+            </tr>
+             <tr>
+                <th>Czwartek</th>
+                <td>18:00 - 00:00</td>                
+            </tr>
+             <tr>
+                <th>Piątek</th>
+                <td>17:00 - 00:00</td>                
+            </tr>
+             <tr>
+                <th>Sobota</th>
+                <td>15:00 - 00:00</td>                
+            </tr>
+             <tr>
+                <th>Niedziela</th>
+                <td>15:00 - 00:00</td>                
+            </tr>
+        </table>
+    <h2>Chcesz się skontaktować, masz pytania?</h2>
+    <article>
+    <p>Jesteśmy do twojej dyspozycji od 8:00 do 0:00.</p>
+    
+    <p>Kontakt możliwy za pomocą:</p>
+    <ul>
+        <li>poniższego formularza,</li>
+        <li>pod numer telefonu <span style="font-weight: bold;">+48 789 388 212</span>,</li>
+        <li id="socialmedia">naszych social mediów:
+            <ul class="container" style="flex-direction: column; gap: 1.2vw;">
+                <li style="display: flex; align-items: center; gap: 1.2vw; padding: 0.6vw;">
+                    <img src="pictures/fb.png" class="sociale">
+                    <a class="linki" href="https://www.facebook.com/" style="font-weight: bold;">Arcade_fb</a>
+                </li>
+                <li style="display: flex; align-items: center; gap: 1.2vw; padding: 0.6vw;">
+                    <img src="pictures/ig.png" class="sociale">
+                    <a class="linki" href="https://www.instagram.com/" style="font-weight: bold;">Arcade_ig</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <address>
+                pod naszym adresem e-mail: <a href="mailto:support@arcadekrakow.com" style="font-weight: bold;">support@arcadekrakow.com</a>
+            </address>
+        </li>
+    </ul>
+    </article>
+    <h2>Skonaktuj się z nami</h2>
+    <article>
+    <form  method="get" id="form" class="form">
+        <label for="godzina">Godzina wysyłki:</label>
+        <input type="text" name="godzina" id="godzina" readonly style="width:36px;">
+        <br>    
+        <label for="email">E-mail</label><br>
+        <input type="text" id="email" name="email" value="kowalski@wp.pl"><br>
+        <p>Temat wiadomości</p>
+        <input type="radio" id="support" name="temat" value="support">
+        <label for="support">Support</label><br>
+        <br>
+        <input type="radio" id="rezerwacja" name="temat" value="rezerwacja">
+        <label for="rezerwacja">Rezerwacja</label><br>
+        <br>
+        <input type="radio" id="odw_rezerwacji" name="temat" value="odw_rezerwacji">
+        <label for="odw_rezerwacji">Odwołanie rezerwacji</label>
+        <br><br>
+        <label for="message">Wiadomość</label><br>
+        <br>
+        <textarea id="message" name="message" rows="10" style="width: 45%">Tutaj proszę wpisać wiadomość.</textarea>
+        <br>
+        <div class="form-message"></div>
+        <input style="width: 50px; padding: 20x;" type="submit" value="Wyślij">
+    </form>
+    <p>Adres naszej placówki: ul. Czarnowiejska 81.</p>
+    <img src="pictures/Lokalizacja.png" alt="Lokalizacja" style="width: 60%; display: block;">
+    </article>
+    </main>
+    <footer>Rafał Harenza</footer>
+</body>
+</html>
