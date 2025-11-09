@@ -11,50 +11,52 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="formularz.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body class="roboto-font">
     <div class="container" style="justify-content: left; margin-left: 5%; align-items: center;">
-        <img src="pictures/gameboy1.png" class="logo"><h1 class="jersey-10-regular nazwa"> Arcade</h1>
+        <img src="pictures/gameboy1.png" class="logo no-select"><h1 class="jersey-10-regular nazwa no-select"> Arcade</h1>
     </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="galeria.html">Galeria</a></li>
-                <li><a href="cennik.html">Cennik</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
-        </nav>
+    <nav>
+        <ul>
+            <li class="no-select" id="Home">Home</li>
+            <li class="no-select" id="Galeria">Galeria</li>
+            <li class="no-select" id="Cennik">Cennik</li>
+            <li class="no-select" id="Kontakt">Kontakt</li>
+        </ul>
+    </nav>
     <main>
-        <table>
+        <table class="tabgodz">
             <tr>
                 <th colspan="2">Godziny otwarcia</th>                
             </tr>
-            <tr>
-                <th>Poniedziałek</th>
-                <td>17:00 - 00:00</td>                
+            <tr class="podswietlenie">
+                <td>Poniedziałek</th>
+                <td class="godziny">17:00 - 00:00</td>                
             </tr>
-             <tr>
-                <th>Wtorek</th>
-                <td>18:00 - 00:00</td>                
+             <tr class="podswietlenie">
+                <td>Wtorek</th>
+                <td class="godziny">18:00 - 00:00</td>                
             </tr>
-             <tr>
-                <th>Środa</th>
-                <td>17:00 - 00:00</td>                
+             <tr class="podswietlenie">
+                <td>Środa</th>
+                <td class="godziny">17:00 - 00:00</td>                
             </tr>
-             <tr>
-                <th>Czwartek</th>
-                <td>18:00 - 00:00</td>                
+             <tr class="podswietlenie">
+                <td>Czwartek</th>
+                <td class="godziny">18:00 - 00:00</td>                
             </tr>
-             <tr>
-                <th>Piątek</th>
-                <td>17:00 - 00:00</td>                
+             <tr class="podswietlenie">
+                <td>Piątek</th>
+                <td class="godziny">17:00 - 00:00</td>                
             </tr>
-             <tr>
-                <th>Sobota</th>
-                <td>15:00 - 00:00</td>                
+             <tr class="podswietlenie">
+                <td>Sobota</th>
+                <td class="godziny">15:00 - 00:00</td>                
             </tr>
-             <tr>
-                <th>Niedziela</th>
-                <td>15:00 - 00:00</td>                
+            <tr class="podswietlenie">
+                <td>Niedziela</th>
+                <td class="godziny">15:00 - 00:00</td>                
             </tr>
         </table>
     <h2>Chcesz się skontaktować, masz pytania?</h2>
@@ -110,7 +112,7 @@
         <input style="width: 50px; padding: 20x;" type="submit" value="Wyślij">
     </form>
     <p>Adres naszej placówki: ul. Czarnowiejska 81.</p>
-    <img src="pictures/Lokalizacja.png" alt="Lokalizacja" style="width: 60%; display: block;">
+    <img src="pictures/Lokalizacja.png" alt="Lokalizacja" class="photo">
     </article>
     </main>
     <footer>Rafał Harenza</footer>

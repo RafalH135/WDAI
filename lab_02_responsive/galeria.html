@@ -10,20 +10,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 <body class="roboto-font ">
     <div class="container" style="justify-content: left; margin-left: 5%; align-items: center;">
-        <img src="pictures/gameboy1.png" class="logo"><h1 class="jersey-10-regular nazwa"> Arcade</h1>
+        <img src="pictures/gameboy1.png" class="logo no-select"><h1 class="jersey-10-regular nazwa no-select"> Arcade</h1>
     </div>    
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="galeria.html">Galeria</a></li>
-            <li><a href="cennik.html">Cennik</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
+            <li class="no-select" id="Home">Home</li>
+            <li class="no-select" id="Galeria">Galeria</li>
+            <li class="no-select" id="Cennik">Cennik</li>
+            <li class="no-select" id="Kontakt">Kontakt</li>
         </ul>
     </nav>
-    <h1>Galeria</h1>
+    <div style="display: flex; justify-content: center;">
+        <h2 class="h2gal">Galeria</h2>
+    </div>
     <main class="container">
         <img src="pictures/flipper.png" alt="flipper do Pinballa" class="picture_in_gallery" title="flipper do Pinballa">
         <img src="pictures/wnetrze1.png" alt="wnętrze game baru" class="picture_in_gallery" title="wnętrze Arcade">

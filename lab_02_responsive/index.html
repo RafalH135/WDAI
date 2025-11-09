@@ -10,20 +10,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 <body class="roboto-font">
     <div class="container" style="justify-content: left; margin-left: 5%; align-items: center;">
-        <img src="pictures/gameboy1.png" class="logo"><h1 class="jersey-10-regular nazwa"> Arcade</h1>
+        <img src="pictures/gameboy1.png" class="logo no-select"><h1 class="jersey-10-regular nazwa no-select"> Arcade</h1>
     </div>
     <nav>
-        <!-- <div class="container"> -->
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="galeria.html">Galeria</a></li>
-                <li><a href="cennik.html">Cennik</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
-            </ul>
-        <!-- </div> -->
+        <ul>
+            <li class="no-select" id="Home">Home</li>
+            <li class="no-select" id="Galeria">Galeria</li>
+            <li class="no-select" id="Cennik">Cennik</li>
+            <li class="no-select" id="Kontakt">Kontakt</li>
+        </ul>
     </nav>
     <main>
         <div class="powitanie">
@@ -53,41 +52,77 @@
         </div>
         </div>
         <h2>Strefy</h2>
-        <div class="container" style="height: 35vw; flex-direction: column; align-items: center; justify-content: center;">
-            <div class="strefy" style="background-image: url(pictures/Lasers.JPG); background-size: 100% 100%;"><div class="overlay"><p class="strefy-font">Laserowy paintball</p></div></div>
-            <div class="strefy" style="background-image: url(pictures/telewizor-do-grania-na-konsoli.jpg);"><div class="overlay"><p class="strefy-font">Konsolowa</p></div></div>
-            <div class="strefy" style="background-image: url(pictures/retrogra.jpg); background-size: 100% 100%;"><div class="overlay"><p class="strefy-font">Retro automaty</p></div></div>
-            <div class="strefy" style="background-image: url(pictures/images.jpg);"><div class="overlay"><p class="strefy-font">Gier ruchowych</p></div></div>
-            <div class="strefy" style="background-image: url(pictures/kregle.jpg);"><div class="overlay"><p class="strefy-font">Klasyczna</p></div></div>
-            <div class="strefy" style="background-image: url(pictures/kinoSG1.jpg); background-size: 100% 100%;"><div class="overlay"><p class="strefy-font">Kinowa</p></div></div>
+        <div class="nadstrefa">
+            <div id="strefa-paintball" class="strefy no-select" style="background-image: url(pictures/Lasers.JPG); background-size: 100% 100%;"><div class="overlay"><p class="strefy-font">Laserowy paintball</p></div></div>
+            <div id="strefa-konsolowa" class="strefy no-select" style="background-image: url(pictures/telewizor-do-grania-na-konsoli.jpg);"><div class="overlay"><p class="strefy-font">Konsolowa</p></div></div>
+            <div id="strefa-retro" class="strefy no-select" style="background-image: url(pictures/retrogra.jpg); background-size: 100% 100%;"><div class="overlay"><p class="strefy-font">Retro automaty</a></div></div>
+            <div id="strefa-taneczna" class="strefy no-select" style="background-image: url(pictures/images.jpg);"><div class="overlay"><p class="strefy-font">Gier ruchowych</p></div></div>
+            <div id="strefa-klasyczna" class="strefy no-select" style="background-image: url(pictures/kregle.jpg);"><div class="overlay"><p class="strefy-font">Klasyczna</p></div></div>
+            <div id="strefa-kinowa" class="strefy no-select" style="background-image: url(pictures/kinoSG1.jpg); background-size: 100% 100%;"><div class="overlay"><p class="strefy-font">Kinowa</p></div></div>
         </div>
-
+        <br>
         <div class="nadpodstrefa">
             <img class="podstrefy wpodstrefa" src="pictures/paintball1.png">
             <article class="podstrefy mpodstrefa">
-                <h3>Laserowy paintball</h3>
+                <h3 id="paintball">Laserowy paintball</h3>
                 <p>Strefa Laserowego Paintballa to nowoczesne pole bitewne w zamkniętym pomieszczeniu, gdzie adrenalina sięga zenitu.
 Wyposaż się w futurystyczny karabin laserowy i zmierz się ze znajomymi w dynamicznej rozgrywce pełnej świateł i dźwięków.
 System punktacji na żywo pozwala śledzić wyniki w czasie rzeczywistym, a efekty świetlne tworzą klimat niczym z gry komputerowej.
 To idealne miejsce dla fanów rywalizacji i dobrej zabawy w bezpiecznej, w pełni elektronicznej formie</p>
             </article>
         </div>
-        <div>
-
+        <div class="nadpodstrefa">
+            <article class="podstrefy mpodstrefa">
+                <h3 id="retro">Strefa Retro Automatów </h3>
+                <p>Strefa Retro Automatów przenosi graczy w złotą erę gier arcade, pełną kolorowych neonów i klasycznych joysticków.
+Znajdziesz tu kultowe tytuły sprzed lat, które pozwalają poczuć nostalgię i rywalizować ze znajomymi.
+Każdy automat oferuje autentyczne doświadczenie – od dźwięków po wygląd ekranu i przycisków.
+To idealne miejsce dla fanów gier wideo, którzy chcą połączyć zabawę z powrotem do dawnych czasów.</p>
+            </article>
+            <img class="podstrefy wpodstrefa" src="pictures/automaty1.png">
         </div>
-        <div>
-
+        <div class="nadpodstrefa">
+            <img class="podstrefy wpodstrefa" src="pictures/kregle-1.jpg">
+            <article class="podstrefy mpodstrefa">
+                <h3 id = "klasyczna">Strefa Klasyczna</h3>
+                <p>Strefa Klasyczna łączy w sobie elegancję i zabawę, oferując bilard oraz tor do kręgli.
+To idealne miejsce na rywalizację ze znajomymi przy klasycznych grach towarzyskich.
+Profesjonalne stoły i tory zapewniają pełen komfort rozgrywki i autentyczne wrażenia.
+Dzięki tej strefie każdy wieczór w game barze staje się okazją do świetnej zabawy i sportowej rywalizacji.</p>
+            </article>
         </div>
-        <div>
-
+        <div class="nadpodstrefa">
+            <article class="podstrefy mpodstrefa">
+                <h3 id="konsolowa">Strefa Konsolowa</h3>
+                <p>Strefa Konsolowa to nowoczesne miejsce dla fanów gier wideo, wyposażone w najnowsze konsole, takie jak Xbox Series X i PS5.
+Sprzęt ten pozwala na rozgrywkę w gry o najnowocześniejszej i najbardziej realistycznej grafice, zapewniając pełne wrażenia wizualne.
+Gracze mogą rywalizować w swoich ulubionych tytułach lub odkrywać nowe produkcje w komfortowej, przyjaznej atmosferze.
+To idealna przestrzeń do wspólnej zabawy ze znajomymi, turniejów lub relaksu przy zaawansowanych graficznie grach.</p>
+            </article>
+            <img class="podstrefy wpodstrefa" src="pictures/Death-Stranding-2-On-the-Beach.jpg">
+            
         </div>
-        <div>
-
+        <div class="nadpodstrefa">
+            <img class="podstrefy wpodstrefa" src="pictures/taneczne1.png">
+            <article class="podstrefy mpodstrefa">
+                <h3 id="taneczna">Strefa Gier Ruchowych</h3>
+                <p>Strefa Gier Ruchowych to miejsce pełne energii i zabawy, gdzie każdy może poczuć rytm muzyki i sprawdzić swoje refleks.
+Specjalne platformy do gier tanecznych, takich jak DDR, pozwalają na dynamiczne wyzwania w rytmie ulubionych hitów.
+Rywalizuj ze znajomymi lub poprawiaj swoje wyniki, śledząc punktację na ekranie w czasie rzeczywistym.
+To idealna przestrzeń dla tych, którzy chcą połączyć dobrą zabawę z aktywnością fizyczną w interaktywnym klimacie game baru.</p>
+            </article>
         </div>
-        <div>
-
+        <div class="nadpodstrefa">
+            
+            <article class="podstrefy mpodstrefa">
+                <h3 id="kinowa">Strefa Kinowa</h3>
+                <p>Strefa Kinowa to kameralna salka w game barze, idealna na seans w gronie znajomych.
+Goście mogą samodzielnie wybrać film, który chcą obejrzeć, tworząc własny repertuar wieczoru.
+Przytulne fotele i odpowiednie nagłośnienie zapewniają komfortowe i pełne wrażeń doświadczenie kinowe.
+To doskonałe miejsce na relaks po zabawie w innych strefach, pozwalające połączyć rozrywkę z filmową atmosferą.</p>
+            </article>
+            <img class="podstrefy wpodstrefa" src="pictures/kino1.png">
         </div>
-        <p>Arcade składa się z 6 stref: niesamowitego labiryntu do gry w laserowego paintballa, strefy z nowoczesnymi konsolami do gier, powierzchni z retro automatami do gier, gdzie można znaleźć m.in. automaty do pinballa, Pac-Mana, Mortal Kombat, Asteroids i wiele innych; strefy z Dance Dance Revoultion - świetna atrakcja dla całej rodziny, oferuje dużo ruchu i dobrej zabawy; kręgielni z stołami bilardowymi oraz kameralnej sali kinowej.</p>
         <h2>Zobacz nas w akcji</h2>
         <article>     
             <a class="linki" href="galeria.html">Tak bawili się inni ; )</a><br>
