@@ -1,0 +1,313 @@
+nav ul{
+    list-style-type: none;
+    justify-content: space-around;
+    display: flex;
+    padding: clamp(0.5rem,1rem,2rem);
+}
+nav li{
+    padding: clamp(0.4rem,0.6rem,0.8rem);
+    justify-content: space-around;
+    background-color:rebeccapurple;
+    width: 18%;
+    border-radius: clamp(0.5rem,0.7rem,0.9rem);
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+nav li:hover,nav li:focus, nav li:active{
+    background-color:rgb(134, 73, 194);
+    font-weight: bold;
+    font-size: 1.3rem;
+    outline: 1px solid rgb(224, 31, 31);
+}
+table {
+  margin: auto;
+  border-collapse: collapse;
+  color: white;
+  border: 0.1rem solid rgb(224, 31, 31);
+  text-shadow: 0px 0px 1rem rgba(255, 255, 255,0.5);
+}
+
+th {
+  padding: 1.5em;
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
+}
+tr{
+    transition: 0.3s;
+}
+td {
+  padding: 1rem;
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+}
+
+tr:nth-child(even) {
+  background: rgba(64, 13, 106, 0.8);
+}
+
+.podswietlenie:hover, .podswietlenie:active, .podswietlenie:focus {
+    filter: brightness(1.5);
+    background: linear-gradient(45deg,rgba(224, 31, 31,0.1),rgba(224, 31, 31,0.5));
+}
+
+.cena {
+  color: rgb(224, 31, 31);
+  text-shadow: 0px 0px 1rem rgba(255, 0, 0,0.5);
+  text-align: right;
+}
+
+
+.linki{
+    font-weight: 600;
+}
+.linki:hover, .linki:focus, .linki:active{
+    color: rgb(255, 49, 49);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(224, 31, 31);
+}
+.no-select{
+    user-select: none;
+}
+
+.roboto-font {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  color: rgb(224, 31, 31);
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1vw;
+}
+.picture_in_gallery {
+    width: 20%;
+    padding: clamp(0.5rem,1rem,1.5rem);
+    background-color: rgb(36, 19, 58);
+    border-radius: 0.6rem;
+    transition: 0.3s easy;
+}
+.picture_in_gallery:hover, .picture_in_gallery:active, .picture_in_gallery:focus{
+    background-color: rgb(47, 30, 69);
+    filter: brightness(1.2);
+}
+main {
+    margin: 5%;
+    border-radius: clamp(0.5rem,1.5rem,2.5rem);
+    padding: 3.5%;
+    background-color: rgb(42, 12, 71);
+}
+p{
+    text-align: left;
+    max-width: 60ch;
+}
+body {
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(15, 2, 33);
+}
+.dymki {
+    width: 45%;
+}
+.nadpodstrefa{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.podstrefy{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 0;
+}
+.mpodstrefa{
+    width: 40%;
+}
+.wpodstrefa{
+    width: 60%;
+    transition: 0.3s ease;
+}
+.wpodstrefa:hover, .wpodstrefa:focus, .wpodstrefa:active{
+    filter: brightness(1.2);
+}
+.nadstrefa{
+    display: flex;
+    height: 35vw; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.strefy {
+    position: relative;
+    font-weight: 700;
+    padding: 1.4vw;
+    width: 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-align: center;
+    border-radius: clamp(0.7rem,1.4rem,2.1rem);
+    height: 23%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 0.3s 0.3s ease;
+}
+.strefy:hover{
+    width: 26%;
+    filter: brightness(1.2);
+}
+.strefy:hover .strefy-font,.strefy:focus .strefy-font,.strefy:active .strefy-font{
+    font-weight: 1000;
+    color: rgb(255, 49, 49);
+}
+
+.overlay {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: clamp(1.5vw,2.5vw,3.5vw);
+    border-radius: clamp(0.1rem,1.6rem,1.8rem);
+    transition: transform 0.3s, background-color 0.3s;
+}
+.photo {
+  display: block;
+  max-width: 60%;
+  height: auto;
+  box-sizing: border-box;
+}
+.powitanie
+{
+    background-image: url(pictures/Pacman.gif);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 20vw;
+    border-radius: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+.nazwa {
+    font-size: 8vw;
+    margin-left: 0vw;
+    background-color: transparent;
+    padding: 1vw;
+}
+.logo {
+    width: 5%;
+    height: 5%;
+}
+.tabgodz {
+    width: 40%;
+}
+.godziny{
+    width: 50%;
+}
+.sociale{
+    width: 2.25rem;
+    height: 2.25rem;
+}
+.h2gal{
+    font-size: 4rem;
+    text-align: center;
+    text-shadow: 0 0 4rem rgb(255, 0, 55);
+}
+@media (max-width:700px){
+    .wpodstrefa{
+        width: 100%;
+    }
+    .mpodstrefa{
+        padding: 5%;
+        width: 90%;
+    }
+    .dymki {
+        width: 100%;
+    }
+    .nadpodstrefa{
+        flex-direction: column;
+    }
+    .nadstrefa{
+        height: 40rem;
+        flex-wrap: nowrap;
+        gap: clamp(2vw,3vw,5vw);
+    }
+    .strefy{
+        width: 80%;
+        height: 6rem;
+    }
+    .picture_in_gallery{
+        width: 90%;
+        border-radius: 2rem;
+    }
+    .container{
+        gap: 4vw;
+    }
+    .photo{
+        max-width: 100%;
+    }
+    .cena{
+        width: 23%;
+    }
+    .strefy:focus, .strefy:active{
+        width:84%;
+    }
+    .powitanie{
+        height: 40vw;
+    }
+    nav li{
+        font-size: 1rem;
+    }
+    nav li:hover,nav li:focus, nav li:active{
+        font-size: 1.05rem;
+    }
+}
+@media (max-width:750px){
+    .cena{
+        width: 30%;
+    }
+    .nazwa{
+        font-size: 18vw;
+    }
+    .logo{
+        width: 10%;
+        height: 10%;
+    }
+    .tabgodz{
+        width: 90%;
+    }
+}
+
+h1 {
+    padding: 1vw;
+    background-color: rgb(53, 17, 100);
+    margin: 3%;
+    border-radius: 2vw;
+}
+
+.jersey-10-regular {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+article{
+    border-radius: 2vw;
+    background-color: rgb(64, 13, 106);
+    padding: 2vw;
+}
+
+footer{
+    background-color: rgb(42, 12, 71);
+    padding: 1vw;
+    padding-left: 2vw;
+}
