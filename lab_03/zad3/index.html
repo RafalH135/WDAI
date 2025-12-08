@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="search">Szukaj</label>
+    <input type="text" id="search" name="search" value=""><br><br>
+    <label for="sortowanie">Sortuj:</label>
+    <select name="sortowanie" id="sortowanie">
+        <option value="def">Default</option>
+        <option value="rosn">Rosnąco</option>
+        <option value="malej">Malejąco</option>
+    </select>
+   <br>
+   <table>
+    <thead>
+        <tr>
+            <th>Zdjęcie</th>
+            <th>Tytuł</th>
+            <th>Opis</th>
+        </tr>
+    </thead>
+    <tbody id="tableBody">
+    </tbody>
+   </table>
+   <script>
+        async function loadData() {
+            const response = await fetch("https://dummyjson.com/products");
+            const data = await response.json();
+
+            const products = data.products;
+
+            const first30 = products.slice(0,30);
+
+            const filtered = first30.map(item => ({
+                id: item.id,
+                title: item.title,
+                description: item.description,
+                thumbnail: item.thumbnail
+
+            }));
+            return filtered;
+        }
+
+        let loadedData=[];
+        let dataToShow = [];
+        const tableBody = document.getElementById("tableBody");
+
+        function generate(dataToShow) {
+            tableBody.innerHTML = "";
+            dataToShow.forEach(element => {
+                const row = document.createElement("tr");
+
+                row.innerHTML = `
+                    <td><img src = "${element.thumbnail}"></td>
+                    <td>${element.title}</td>
+                    <td>${element.description}</td>
+                `;
+
+                tableBody.appendChild(row);
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", async () => {
+            loadedData = await loadData();
+            dataToShow = [...loadedData];
+            generate(dataToShow);
+        });
+
+        const searchInput = document.getElementById("search");
+        searchInput.addEventListener('input', () => {
+            const searchText = searchInput.value.toLowerCase();
+            const filtered = dataToShow.filter(element => element.title.toLowerCase().includes(searchText) || element.description.toLowerCase().includes(searchText));
+            generate(filtered);
+        });
+
+        const sortowanie = document.getElementById("sortowanie");
+        sortowanie.addEventListener('change', () => {
+            const selected = sortowanie.value;
+            if(selected === "malej"){
+                dataToShow.sort((a, b) => b.title.localeCompare(a.title));
+            }
+            if(selected === "rosn"){
+                dataToShow.sort((a, b) => a.title.localeCompare(b.title));
+            }
+            if(selected === "def"){
+                dataToShow=[...loadedData];
+            }
+            const searchText = searchInput.value.toLowerCase();
+            const filtered = dataToShow.filter(element => element.title.toLowerCase().includes(searchText) || element.description.toLowerCase().includes(searchText));
+            generate(filtered);
+        });
+   </script>
+</body>
+</html>

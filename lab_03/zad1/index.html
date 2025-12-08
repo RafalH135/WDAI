@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="display: flex; gap: 10px;">
+        <div id = "start" style = "padding: 10px; border: solid 2px black; border-radius: 20px;">Start</div>
+        <div id = "stop" style = "padding: 10px; border: solid 2px black; border-radius: 20px;">Stop</div>
+        <div id = "reset" style = "padding: 10px; border: solid 2px black; border-radius: 20px;">Reset</div>
+    </div>
+    <span id = "stoper"></span>
+
+    <script>
+        document.getElementById("start").onclick = function() {startFunc()};
+        document.getElementById("stop").onclick = function() {stopFunc()};
+        document.getElementById("reset").onclick = function() {resetFunc()};
+        let stoper = document.getElementById("stoper");
+
+        // let odliczanie = false;
+        let sekundy=0;
+        let licz = null;
+
+        function startFunc() {
+            if(licz!==null) return;
+
+            licz = setInterval(function() {
+            sekundy++;
+            if(sekundy<=59){
+                    stoper.textContent = sekundy+"s";
+                }
+                else{
+                    stoper.textContent = Math.floor(sekundy/60)+'min '+sekundy%60+'s';
+                }
+
+        },1000);
+        }
+
+        function stopFunc() {
+            clearInterval(licz);
+            licz=null;
+        }
+        function resetFunc() {
+            stopFunc();
+            sekundy=0;
+            stoper.textContent="0s";
+        }
+    </script>
+</body>
+</html>

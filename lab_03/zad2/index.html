@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="mini">Minimalna długość hasła</label><br>
+    <input type="text" id="mini" name="mini" value="7"><br>
+    
+    <label for="maxi">Maksymalna długość hasła</label><br>
+    <input type="text" id="maxi" name="maxi" value="8"><br>
+
+    <p>Czy hasło ma zawierać wielkie litery?</p>
+    <label>
+        <input type="radio" id="bTak" name="big" value="Tak">Tak
+    </label><br>
+    <br>
+    <label>
+        <input type="radio" id="bNie" name="big" value="Nie">Nie
+    </label><br>
+    <br>
+    <p>Czy hasło ma zawierać znaki specjalne?</p>
+    <label>
+        <input type="radio" id="sTak" name="special" value="Tak">Tak
+    </label><br>
+    <br>
+    <label>
+        <input type="radio" id="sNie" name="special" value="Nie">Nie
+    </label><br>
+    <br>
+    <div id = "submit" style = "padding: 10px; border: solid 2px black; border-radius: 20px; width: 70px;">Wygeneruj hasło</div>
+
+    <script>
+
+        document.getElementById('submit').onclick = () => {
+
+            const smallCharacters = [];
+            for(let i = 'a'.charCodeAt(0);i<='z'.charCodeAt(0);i++){
+                smallCharacters.push(String.fromCharCode(i));
+            }
+            const bigCharacters = [];
+            for(let i = 'A'.charCodeAt(0);i<='Z'.charCodeAt(0);i++){
+                bigCharacters.push(String.fromCharCode(i));
+            }
+            const digits = ['0','1','2','3','4','5','6','7','8','9'];
+            const specialCharacters = "~`!@#$%^&*()_-';:<>,.?/\|";
+
+            const bigLetters = document.querySelector('input[name="big"]:checked')?.value;
+            const special = document.querySelector('input[name="special"]:checked')?.value;
+            const minimumLength = parseInt(document.getElementById('mini').value);
+            const maximumLength = parseInt(document.getElementById('maxi').value);
+
+            const length = Math.floor(Math.random() * (maximumLength - minimumLength + 1)) + minimumLength;
+            
+            const toUse = [...smallCharacters].concat(digits);
+
+            const password = new Array(length);
+            let lOfBig = 0;
+            let lOfSpecial = 0;
+            let lOfBasic=length;
+            if(bigLetters === 'Tak' && special === 'Tak'){
+                
+                lOfBig=Math.floor(Math.random() * (length - 1) ) + 1;
+                lOfSpecial=Math.floor(Math.random() * length-lOfBig) + 1;
+                lOfBasic=length-lOfBig-lOfSpecial;
+                while(lOfBig>0){
+                    const position = Math.floor(Math.random() * length);
+                    if(password[position] === undefined){
+                        password[position] = bigCharacters[Math.floor(Math.random() * bigCharacters.length )]
+                        lOfBig--;
+                    }
+                }
+                while(lOfSpecial>0){
+                    const position = Math.floor(Math.random() * length);
+                    if(password[position] === undefined){
+                        password[position] = specialCharacters[Math.floor(Math.random() * specialCharacters.length )]
+                        lOfSpecial--;
+                    }
+                }
+                
+            }
+            else if(special === 'Tak'){
+                lOfSpecial=Math.floor(Math.random() * length) + 1;
+                lOfBasic-=lOfSpecial;
+                while(lOfSpecial>0){
+                    const position = Math.floor(Math.random() * (length));
+                    if(password[position] === undefined){
+                        password[position] = specialCharacters[Math.floor(Math.random() * (specialCharacters.length) )]
+                        lOfSpecial--;
+                    }
+                }
+            }
+            else if(bigLetters === 'Tak'){
+                lOfBig=Math.floor(Math.random() * (length) ) + 1;
+                lOfBasic-=lOfBig;
+                while(lOfBig>0){
+                    const position = Math.floor(Math.random() * (length - 0));
+                    if(password[position] === undefined){
+                        password[position] = bigCharacters[Math.floor(Math.random() * (bigCharacters.length) )]
+                        lOfBig--;
+                    }
+                }
+            }
+            
+            while(lOfBasic){
+                const position = Math.floor(Math.random() * (length - 0));
+                if(password[position] === undefined){
+                    password[position] = toUse[Math.floor(Math.random() * (toUse.length) )]
+                    lOfBasic--;
+                }
+            }
+            alert("Twoje hasło to "+password.join(''));
+        }
+    </script>
+</body>
+</html>
